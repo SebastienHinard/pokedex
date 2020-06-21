@@ -1,0 +1,39 @@
+.PokemonSearchInput_wrapper {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    position: relative;
+    width: 200px;
+    height: 32px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.PokemonSearchInput,
+.PokemonSearchInput_helper {
+    box-sizing: border-box;
+    display: block;
+    width: inherit;
+    border: none;
+    padding: 4px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.PokemonSearchInput {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #000;
+    z-index: 2;
+}
+
+.PokemonSearchInput_helper {
+    z-index: 1;
+    color: grey;
+}
