@@ -5,10 +5,17 @@ import './style.css'
 class PokemonSearchInput extends React.Component {
     onChange = () => {
         let value = document.getElementById(this.props.id).value
-        let suggestion =  this.props.data.find((pokemon)=> pokemon.name.match(`^${value}`))
-        document.getElementById(this.props.id + '_helper').innerText = (value !== '' && suggestion !== undefined)
-            ? suggestion.name
-            : ''
+        let suggestion =  this.props.data.find((pokemon)=> pokemon.name.match(`^${value.toLowerCase()}`))
+        let isCapitalized = /^[A-Z]/.test(value)
+        if (isCapitalized) {
+            document.getElementById(this.props.id + '_helper').innerText = (value !== '' && suggestion !== undefined)
+                ? suggestion.name[0].toUpperCase() + suggestion.name.slice(1)
+                : ''
+        } else {
+            document.getElementById(this.props.id + '_helper').innerText = (value !== '' && suggestion !== undefined)
+                ? suggestion.name
+                : ''
+        }
     }
 
     onKeyDown = (e) => {
