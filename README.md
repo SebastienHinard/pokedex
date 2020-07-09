@@ -1,3 +1,15 @@
+## Yup, another pokedex react app
+
+Pokedex app using the pokeApi https://pokeapi.co/
+
+## Changelog
+
+### 07/09/2020
+Search functionality, you can fetch a pokemon and display it's name and sprite.
+First CSS implementation.
+
+
+##
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
